@@ -1,0 +1,32 @@
+.block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.item {
+    width: 500px;
+    height: 550px;
+    border: 2px solid grey;
+    background-color: white;
+    align-items: center;
+    padding: 20px;
+    color: brown;
+    font-weight: bold;
+}
+
+.item img {
+    width: 200px;
+    height: 300;
+    margin-top: 10px;
+
+}
+
+.general {
+    margin-bottom: 5px;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 0;
+
+}
