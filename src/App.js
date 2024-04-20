@@ -1,32 +1,49 @@
-import logo from './logo.svg';
+
+
+import { useEffect, useState } from 'react';
 import './App.css';
-import ProductList from './components/products/product-list';
+import { nanoid } from 'nanoid';
+import Modal from './components/modal/modal';
+// import ProductList from './components/products/product-list';
+import PizzaList from './components/pizzas/pizza-list';
+import PizzaForm from './components/pizzas/pizza-form';
+import AddButton from './components/pizzas/add-button';
+import pizzas from './components/pizzas/pizzas.js';
 
 function App() {
-  return (
-    <div>
-    
-      <ProductList />
-    </div>
+ const [btnText, setBtnText] = useState("ДОБАВИТЬ ТОВАР");
+  const [modalActive, setModalActive] = useState(false);
+  const [pList, setPList] = useState(pizzas);
+  const addPizza = (h, price, image, description) => {
+    console.log("Добавлена пицца:", h, price, image, description);
+      const newPizza = {
+          id: nanoid(),
+          h,
+          price,
+          image,
+          description
+      };
+      setPList([...pList, newPizza]);
+  };
  
-  // return (
-  //   <div className="App">
-  //     <header className="App-header">
-  //       <img src={logo} className="App-logo" alt="logo" />
-  //       <p>
-  //         Edit <code>src/App.js</code> and save to reload.
-  //       </p>
-  //       <a
-  //         className="App-link"
-  //         href="https://reactjs.org"
-  //         target="_blank"
-  //         rel="noopener noreferrer"
-  //       >
-  //         Learn React
-  //       </a>
-  //     </header>
-  //   </div>
-   );
+  useEffect(() => {
+
+    setBtnText(modalActive? "ЗАКРЫТЬ":"ДОБАВИТЬ ТОВАР")
+
+
+  }, [modalActive]);
+  return (
+    
+    <div>
+      <h1 className="title">PIZZA-STORE</h1>
+      <button className='okno' onClick={() => setModalActive(!modalActive)}>{btnText }</button>
+      <PizzaList pizzas={pList} />
+      <Modal addPizza={addPizza} active={modalActive}>
+        {/* <AddButton buttonAdd={addPizza} /> */}
+
+      </Modal></div>
+  );
 }
 
 export default App;
+

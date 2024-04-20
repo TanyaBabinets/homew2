@@ -8,7 +8,7 @@
 .item {
     width: 500px;
     height: 550px;
-    border: 2px solid grey;
+    border: 2px solid rgb(242, 233, 149);
     background-color: white;
     align-items: center;
     padding: 20px;
