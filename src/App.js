@@ -6,8 +6,7 @@ import { nanoid } from 'nanoid';
 import Modal from './components/modal/modal';
 // import ProductList from './components/products/product-list';
 import PizzaList from './components/pizzas/pizza-list';
-import PizzaForm from './components/pizzas/pizza-form';
-import AddButton from './components/pizzas/add-button';
+
 import pizzas from './components/pizzas/pizzas.js';
 
 function App() {
