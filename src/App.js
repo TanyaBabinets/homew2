@@ -38,7 +38,7 @@ function App() {
       <button className='okno' onClick={() => setModalActive(!modalActive)}>{btnText}</button>
       <PizzaList pizzas={pList} />
       <Modal addPizza={addPizza} active={modalActive}>
-        {/* <AddButton buttonAdd={addPizza} /> */}
+        
 
       </Modal></div>
   );
