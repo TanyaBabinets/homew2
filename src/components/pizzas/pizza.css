@@ -38,6 +38,20 @@
     justify-content: space-evenly;
 }
 
+.item2 button{
+    background-color: rgb(102, 216, 102);
+    border-radius: 5px;
+    border: none;
+    height: 50px;
+    width: 200px;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+}
+.item2 button svg {
+  color: red;
+  
+}
 .item1 {
     margin-right: 10px;
     flex-direction: row;
@@ -49,7 +63,8 @@
 .add {
     width: 300px;
     height: 300px;
-    border: 6px solid rgb(120, 238, 120);;
+    border: 6px solid rgb(120, 238, 120);
+    ;
     background-color: beige;
     margin-left: 20px;
     margin-top: 20px;
@@ -101,7 +116,7 @@
 
 .item1 button {
     width: 150px;
-    height: 20px;
+    height: 30px;
 }
 
 h1 {
@@ -124,4 +139,16 @@ h1 {
 .block2 {
     margin-top: 20px;
 
+}
+
+.icons {
+    color: rgb(31, 158, 33);
+    margin-left: 300px;
+}
+h2{
+    color:brown;
+}
+.count {
+    font-size: 42px;
+    margin-left: 10px;
 }
